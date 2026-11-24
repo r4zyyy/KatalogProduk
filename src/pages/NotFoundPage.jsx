@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function NotFoundPage() {
   return (
-    <section>
+    <section className="not-found-page">
       <header className="page-header">
         <p className="label-caps">404</p>
         <h1 className="page-title">Halaman tidak ditemukan</h1>
@@ -10,9 +10,15 @@ export default function NotFoundPage() {
           Alamat yang kamu buka tidak tersedia di katalog ini.
         </p>
       </header>
-      <Link to="/" className="nav-link active">
-        Kembali ke Beranda
-      </Link>
+
+      <div className="not-found-actions">
+        <Link to="/" className="btn btn-primary">
+          Kembali ke Beranda
+        </Link>
+        <Link to="/produk" className="btn btn-secondary">
+          Buka Katalog
+        </Link>
+      </div>
     </section>
   );
 }
